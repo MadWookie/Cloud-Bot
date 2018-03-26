@@ -102,7 +102,7 @@ initial_extensions = [f'cogs.{ext}' for ext in
                       ('help', 'utility', 'private',)]
 
 description = 'Cloudy - Created by MadWookie & Langinator3.'
-bot = CloudBot(command_prefix=['.'], description=description, formatter=formatter, request_offline_members=True)
+bot = CloudBot(command_prefix=['!'], description=description, formatter=formatter, request_offline_members=True)
 bot.ready = False
 bot.db_pool = bot.loop.run_until_complete(asyncpg.create_pool(config.dsn, init=set_codecs))
 
